@@ -55,7 +55,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
+      - name: Remov project dependencies
+        run : rm -rf node_modules
+        
       - name: Install project dependencies
         run: npm ci
 
